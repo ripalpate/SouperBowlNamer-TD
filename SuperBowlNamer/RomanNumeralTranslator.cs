@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace SuperBowlNamer
@@ -8,26 +9,15 @@ namespace SuperBowlNamer
     {
         public string TranslateToRomanNumeral(int numberToTranslate)
         {
-            var result = "";
-            //switch (numberToTranslate) {
-            //    case 1 : return result = "I";
-            //    case 5 : return result = "V";
-            //    case 9 : return result = "IX";
-            //    default: return result;
-            //}
-            if (numberToTranslate == 1)
+               var counter = numberToTranslate;
+               var result = "";
+            while (counter > 0)
             {
-                return result += "I";
-            }
-            if (numberToTranslate >= 5 && numberToTranslate<9)
-            {
-                var counter = numberToTranslate - 5;
-                result = "V";
-                while(counter > 0) {
-                    result += "I";
-                   counter= counter - 1;
-                }
-                return result;
+                if (counter >= 10) { result +="X"; counter -= 10; }
+                else if (counter >= 9) { result +="IX"; counter -= 9; }
+                else if (counter >= 5) { result +="V"; counter -= 5; }
+                else if (counter >= 4) { result +="IV"; counter -= 4; }
+                else if (counter >= 1) { result +="I"; counter -= 1; }
             }
             return result;
         }
