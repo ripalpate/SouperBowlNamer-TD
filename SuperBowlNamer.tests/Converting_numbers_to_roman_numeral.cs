@@ -106,5 +106,18 @@ namespace SuperBowlNamer.tests
             //Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void number_68_should_translate_to_roman_numeral_LXVIII()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 68;
+            var expectedResult = "LXVIII";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
