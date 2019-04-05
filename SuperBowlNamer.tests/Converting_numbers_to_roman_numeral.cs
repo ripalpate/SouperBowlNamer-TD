@@ -159,5 +159,69 @@ namespace SuperBowlNamer.tests
             Assert.Equal(expectedResult, actualResult);
         }
 
+        [Fact]
+        public void number_500_should_translate_to_roman_numeral_D()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 500;
+            var expectedResult = "D";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void number_501_should_translate_to_roman_numeral_DI()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 501;
+            var expectedResult = "DI";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void number_649_should_translate_to_roman_numeral_DCXLIX()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 649;
+            var expectedResult = "DCXLIX";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void number_798_should_translate_to_roman_numeral_DCCXCVIII()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 798;
+            var expectedResult = "DCCXCVIII";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void number_891_should_translate_to_roman_numeral_DCCCXCI()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 891;
+            var expectedResult = "DCCCXCI";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }

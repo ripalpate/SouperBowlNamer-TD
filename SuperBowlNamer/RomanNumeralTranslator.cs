@@ -13,7 +13,9 @@ namespace SuperBowlNamer
                var result = "";
             while (counter > 0)
             {
-                if (counter >= 100) { result += "C"; counter -= 100; }
+                if (counter >= 500) { result += "D"; counter -= 500; }
+                else if (counter >= 400) { result += "CD"; counter -= 400; }
+                else if (counter >= 100) { result += "C"; counter -= 100; }
                 else if (counter >= 90) { result += "XC"; counter -= 90; }
                 else if (counter >= 50) { result += "L"; counter -= 50; }
                 else if (counter >= 40) { result += "XL"; counter -= 40; }
