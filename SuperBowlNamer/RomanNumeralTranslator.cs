@@ -9,40 +9,15 @@ namespace SuperBowlNamer
     {
         public string TranslateToRomanNumeral(int numberToTranslate)
         {
-            var counter = numberToTranslate;
-            var result = "";
-
-            if (counter >= 9 && counter < 19)
+               var counter = numberToTranslate;
+               var result = "";
+            while (counter > 0)
             {
-                counter = counter - 10;
-                if (counter == -1)
-                {
-                    result += "I";
-                }
-                result += "X";
-            }
-            if (counter >= 4 && counter < 9)
-            {
-                 counter = counter - 5;
-                if (counter == -1)
-                {
-                    result += "I";
-                }
-                result += "V";
-                while (counter > 0)
-                {
-                    result += "I";
-                    counter = counter - 1;
-                }       
-            }
-            if (counter >= 1 && counter <= 3)
-            {
-                while (counter > 0)
-                {
-                    result += "I";
-                    counter = counter - 1;
-                }
-                return result;
+                if (counter >= 10) { result +="X"; counter -= 10; }
+                else if (counter >= 9) { result +="IX"; counter -= 9; }
+                else if (counter >= 5) { result +="V"; counter -= 5; }
+                else if (counter >= 4) { result +="IV"; counter -= 4; }
+                else if (counter >= 1) { result +="I"; counter -= 1; }
             }
             return result;
         }
