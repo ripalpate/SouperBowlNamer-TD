@@ -223,5 +223,83 @@ namespace SuperBowlNamer.tests
             //Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void number_1000_should_translate_to_roman_numeral_M()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 1000;
+            var expectedResult = "M";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void number_1004_should_translate_to_roman_numeral_MIV()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 1004;
+            var expectedResult = "MIV";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void number_1006_should_translate_to_roman_numeral_MVI()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 1006;
+            var expectedResult = "MVI";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void number_1023_should_translate_to_roman_numeral_MXXIII()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 1023;
+            var expectedResult = "MXXIII";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void number_2014_should_translate_to_roman_numeral_MMXIV()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 2014;
+            var expectedResult = "MMXIV";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void number_3999_should_translate_to_roman_numeral_MMMCMXCIX()
+        {
+            //Arrange
+            var translator = new RomanNumeralTranslator();
+            var input = 3999;
+            var expectedResult = "MMMCMXCIX";
+            //Act
+            var actualResult = translator.TranslateToRomanNumeral(input);
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
