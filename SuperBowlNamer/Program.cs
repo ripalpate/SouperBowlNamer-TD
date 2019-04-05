@@ -6,11 +6,11 @@ namespace SuperBowlNamer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter the number");
+            Console.WriteLine("Please enter the number between 0 and 3999");
             var input = Console.ReadLine();
-            var converted = Convert.ToInt16(input);
+            var convertedInputToNumber = Convert.ToInt16(input);
             var ConvertToRoman = new RomanNumeralTranslator();
-            var result = ConvertToRoman.TranslateToRomanNumeral(converted);
+            var result = ConvertToRoman.TranslateToRomanNumeral(convertedInputToNumber);
             Console.WriteLine($"Roman number is {result}");
             Console.ReadLine();
         }
