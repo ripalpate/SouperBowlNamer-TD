@@ -9,10 +9,19 @@ namespace SuperBowlNamer
             Console.WriteLine("Please enter the number between 0 and 3999");
             var input = Console.ReadLine();
             var convertedInputToNumber = Convert.ToInt16(input);
-            var ConvertToRoman = new RomanNumeralTranslator();
-            var result = ConvertToRoman.TranslateToRomanNumeral(convertedInputToNumber);
-            Console.WriteLine($"Roman number is {result}");
-            Console.ReadLine();
+            try
+            {
+                if (0 >= convertedInputToNumber || convertedInputToNumber > 4000) throw new InvalidInputException();
+                var ConvertToRoman = new RomanNumeralTranslator();
+                var result = ConvertToRoman.TranslateToRomanNumeral(convertedInputToNumber);
+                Console.WriteLine($"Roman number is {result}");
+                Console.ReadLine();
+            }
+            catch (InvalidInputException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.ReadLine();
+            }
         }
     }
 }
