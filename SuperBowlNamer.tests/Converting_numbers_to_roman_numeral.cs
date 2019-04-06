@@ -30,7 +30,6 @@ namespace SuperBowlNamer.tests
         [InlineData(2014, "MMXIV")]
         [InlineData(3999, "MMMCMXCIX")]
 
-
         public void number_should_translate_to_roman_numeral(int input, string expectedResult)
         {
             //Arrange
