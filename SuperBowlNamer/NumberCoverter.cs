@@ -22,7 +22,10 @@ namespace SuperBowlNamer
             {
                 result -= 20;
             }
-            
+            if (RomanNumeral.Contains("CD") || RomanNumeral.Contains("CM"))
+            {
+                result -= 200;
+            }
             return result;
         }
 

@@ -20,6 +20,17 @@ namespace SuperBowlNamer.tests
         [InlineData("LXXXIII", 83)]
         [InlineData("XCVII", 97)]
         [InlineData("XCIX", 99)]
+        [InlineData("D", 500)]
+        [InlineData("DI", 501)]
+        [InlineData("DCXLIX", 649)]
+        [InlineData("DCCXCVIII", 798)]
+        [InlineData("DCCCXCI", 891)]
+        [InlineData("M", 1000)]
+        [InlineData("MIV", 1004)]
+        [InlineData("MVI", 1006)]
+        [InlineData("MXXIII", 1023)]
+        [InlineData("MMXIV", 2014)]
+        [InlineData("MMMCMXCIX", 3999)]
         public void romanNumerals_should_translate_to_number(string input, int expectedResult)
         {
             //Arrange
