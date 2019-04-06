@@ -14,6 +14,15 @@ namespace SuperBowlNamer
             {
                 result += ConvertCharacterToNumber(character);
             }
+            if (RomanNumeral.Contains("IX") || RomanNumeral.Contains("IV"))
+            {
+                result -= 2;
+            }
+            if (RomanNumeral.Contains("XL") || RomanNumeral.Contains("XC"))
+            {
+                result -= 20;
+            }
+            
             return result;
         }
 
